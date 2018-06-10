@@ -1,5 +1,6 @@
 require 'webrick'
-DefaultBody = File.open("main.html", "r").read
+dir = File.dirname(__FILE__)
+DefaultBody = File.open(dir + "/main.html", "r").read
 
 class NullStream
    def <<(o); self; end
