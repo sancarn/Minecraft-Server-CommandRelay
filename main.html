@@ -1,0 +1,242 @@
+<head>
+    <!--<  Include jQuery and Ace  >-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.9/ace.js"></script>
+
+    <!--<  Include console.js and console.css >-->
+    <script src="https://cdn.rawgit.com/TarVK/chromeConsole/version-1.0/console.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/TarVK/chromeConsole/version-1.0/console.css" type="text/css" />
+
+    <script>
+        function evaluateMC(script){
+            request = new XMLHttpRequest
+            request.open("EVAL","")
+            request.send(script)
+        }
+         $(function(){
+             var cons = $(".console").console({
+                onInput: function(text){
+                    this.output(text);
+                    evaluateMC(text);
+                },
+            });
+         })
+
+     </script>
+</head>
+<body>
+    <div style="float:right;width:50%;border-color:#ccc;border-width:medium;border-style:solid;padding:5px;">
+        <div class="console"></div>
+    </div>
+    <textarea id='player'></textarea><br/><br/>
+
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 1 1')">Stone</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 1 64')">Stone</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 2 1')">Grass</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 2 64')">Grass</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 3 1')">Dirt</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 3 64')">Dirt</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 4 1')">Cobblestone</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 4 64')">Cobblestone</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 5 1')">Oak Wood Plank</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 5 64')">Oak Wood Plank</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 6 1')">Oak Sapling</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 6 64')">Oak Sapling</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 7 1')">Bedrock</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 7 64')">Bedrock</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 8 1')">Flowing Water</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 8 64')">Flowing Water</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 9 1')">Still Water</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 9 64')">Still Water</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 10 1')">Flowing Lava</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 10 64')">Flowing Lava</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 11 1')">Still Lava</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 11 64')">Still Lava</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 12 1')">Sand</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 12 64')">Sand</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 13 1')">Gravel</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 13 64')">Gravel</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 14 1')">Gold Ore</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 14 64')">Gold Ore</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 15 1')">Iron Ore</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 15 64')">Iron Ore</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 16 1')">Coal Ore</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 16 64')">Coal Ore</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 17 1')">Oak Wood</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 17 64')">Oak Wood</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 18 1')">Oak Leaves</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 18 64')">Oak Leaves</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 19 1')">Sponge</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 19 64')">Sponge</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 20 1')">Glass</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 20 64')">Glass</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 21 1')">Lapis Lazuli Ore</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 21 64')">Lapis Lazuli Ore</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 22 1')">Lapis Lazuli Block</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 22 64')">Lapis Lazuli Block</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 23 1')">Dispenser</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 23 64')">Dispenser</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 24 1')">Sandstone</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 24 64')">Sandstone</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 25 1')">Note Block</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 25 64')">Note Block</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 26 1')">Bed</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 26 64')">Bed</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 27 1')">Powered Rail</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 27 64')">Powered Rail</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 28 1')">Detector Rail</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 28 64')">Detector Rail</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 29 1')">Sticky Piston</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 29 64')">Sticky Piston</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 30 1')">Cobweb</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 30 64')">Cobweb</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 31 1')">Dead Shrub</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 31 64')">Dead Shrub</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 32 1')">Dead Bush</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 32 64')">Dead Bush</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 33 1')">Piston</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 33 64')">Piston</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 34 1')">Piston Head</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 34 64')">Piston Head</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 35 1')">White Wool</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 35 64')">White Wool</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 37 1')">Dandelion</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 37 64')">Dandelion</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 38 1')">Poppy</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 38 64')">Poppy</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 39 1')">Brown Mushroom</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 39 64')">Brown Mushroom</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 40 1')">Red Mushroom</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 40 64')">Red Mushroom</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 41 1')">Gold Block</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 41 64')">Gold Block</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 42 1')">Iron Block</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 42 64')">Iron Block</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 43 1')">Double Stone Slab</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 43 64')">Double Stone Slab</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 44 1')">Stone Slab</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 44 64')">Stone Slab</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 45 1')">Bricks</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 45 64')">Bricks</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 46 1')">TNT</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 46 64')">TNT</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 47 1')">Bookshelf</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 47 64')">Bookshelf</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 48 1')">Moss Stone</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 48 64')">Moss Stone</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 49 1')">Obsidian</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 49 64')">Obsidian</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 50 1')">Torch</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 50 64')">Torch</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 51 1')">Fire</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 51 64')">Fire</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 52 1')">Monster Spawner</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 52 64')">Monster Spawner</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 53 1')">Oak Wood Stairs</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 53 64')">Oak Wood Stairs</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 54 1')">Chest</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 54 64')">Chest</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 55 1')">Redstone Wire</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 55 64')">Redstone Wire</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 56 1')">Diamond Ore</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 56 64')">Diamond Ore</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 57 1')">Diamond Block</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 57 64')">Diamond Block</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 58 1')">Crafting Table</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 58 64')">Crafting Table</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 59 1')">Wheat Crops</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 59 64')">Wheat Crops</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 60 1')">Farmland</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 60 64')">Farmland</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 61 1')">Furnace</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 61 64')">Furnace</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 62 1')">Burning Furnace</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 62 64')">Burning Furnace</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 63 1')">Standing Sign Block</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 63 64')">Standing Sign Block</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 64 1')">Oak Door Block</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 64 64')">Oak Door Block</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 65 1')">Ladder</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 65 64')">Ladder</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 66 1')">Rail</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 66 64')">Rail</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 67 1')">Cobblestone Stairs</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 67 64')">Cobblestone Stairs</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 68 1')">Wall-mounted Sign Block</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 68 64')">Wall-mounted Sign Block</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 69 1')">Lever</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 69 64')">Lever</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 70 1')">Stone Pressure Plate</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 70 64')">Stone Pressure Plate</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 71 1')">Iron Door Block</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 71 64')">Iron Door Block</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 72 1')">Wooden Pressure Plate</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 72 64')">Wooden Pressure Plate</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 73 1')">Redstone Ore</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 73 64')">Redstone Ore</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 74 1')">Glowing Redstone Ore</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 74 64')">Glowing Redstone Ore</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 75 1')">Redstone Torch (off)</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 75 64')">Redstone Torch (off)</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 76 1')">Redstone Torch (on)</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 76 64')">Redstone Torch (on)</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 77 1')">Stone Button</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 77 64')">Stone Button</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 78 1')">Snow</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 78 64')">Snow</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 79 1')">Ice</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 79 64')">Ice</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 80 1')">Snow Block</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 80 64')">Snow Block</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 81 1')">Cactus</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 81 64')">Cactus</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 82 1')">Clay</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 82 64')">Clay</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 83 1')">Sugar Canes</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 83 64')">Sugar Canes</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 84 1')">Jukebox</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 84 64')">Jukebox</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 85 1')">Oak Fence</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 85 64')">Oak Fence</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 86 1')">Pumpkin</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 86 64')">Pumpkin</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 87 1')">Netherrack</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 87 64')">Netherrack</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 88 1')">Soul Sand</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 88 64')">Soul Sand</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 89 1')">Glowstone</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 89 64')">Glowstone</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 90 1')">Nether Portal</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 90 64')">Nether Portal</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 91 1')">Jack o'Lantern</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 91 64')">Jack o'Lantern</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 92 1')">Cake Block</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 92 64')">Cake Block</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 93 1')">Redstone Repeater Block (off)</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 93 64')">Redstone Repeater Block (off)</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 94 1')">Redstone Repeater Block (on)</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 94 64')">Redstone Repeater Block (on)</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 95 1')">White Stained Glass</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 95 64')">White Stained Glass</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 96 1')">Wooden Trapdoor</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 96 64')">Wooden Trapdoor</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 256 1')">Iron Shovel</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 256 64')">Iron Shovel</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 257 1')">Iron Pickaxe</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 257 64')">Iron Pickaxe</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 258 1')">Iron Axe</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 258 64')">Iron Axe</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 259 1')">Flint and Steel</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 259 64')">Flint and Steel</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 260 1')">Apple</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 260 64')">Apple</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 261 1')">Bow</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 261 64')">Bow</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 262 1')">Arrow</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 262 64')">Arrow</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 263 1')">Coal</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 263 64')">Coal</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 264 1')">Diamond</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 264 64')">Diamond</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 265 1')">Iron Ingot</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 265 64')">Iron Ingot</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 266 1')">Gold Ingot</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 266 64')">Gold Ingot</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 267 1')">Iron Sword</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 267 64')">Iron Sword</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 268 1')">Wooden Sword</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 268 64')">Wooden Sword</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 269 1')">Wooden Shovel</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 269 64')">Wooden Shovel</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 270 1')">Wooden Pickaxe</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 270 64')">Wooden Pickaxe</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 271 1')">Wooden Axe</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 271 64')">Wooden Axe</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 272 1')">Stone Sword</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 272 64')">Stone Sword</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 273 1')">Stone Shovel</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 273 64')">Stone Shovel</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 274 1')">Stone Pickaxe</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 274 64')">Stone Pickaxe</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 275 1')">Stone Axe</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 275 64')">Stone Axe</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 276 1')">Diamond Sword</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 276 64')">Diamond Sword</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 277 1')">Diamond Shovel</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 277 64')">Diamond Shovel</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 278 1')">Diamond Pickaxe</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 278 64')">Diamond Pickaxe</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 279 1')">Diamond Axe</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 279 64')">Diamond Axe</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 280 1')">Stick</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 280 64')">Stick</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 281 1')">Bowl</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 281 64')">Bowl</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 282 1')">Mushroom Stew</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 282 64')">Mushroom Stew</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 283 1')">Golden Sword</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 283 64')">Golden Sword</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 284 1')">Golden Shovel</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 284 64')">Golden Shovel</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 285 1')">Golden Pickaxe</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 285 64')">Golden Pickaxe</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 286 1')">Golden Axe</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 286 64')">Golden Axe</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 287 1')">String</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 287 64')">String</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 288 1')">Feather</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 288 64')">Feather</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 289 1')">Gunpowder</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 289 64')">Gunpowder</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 290 1')">Wooden Hoe</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 290 64')">Wooden Hoe</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 291 1')">Stone Hoe</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 291 64')">Stone Hoe</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 292 1')">Iron Hoe</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 292 64')">Iron Hoe</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 293 1')">Diamond Hoe</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 293 64')">Diamond Hoe</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 294 1')">Golden Hoe</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 294 64')">Golden Hoe</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 295 1')">Wheat Seeds</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 295 64')">Wheat Seeds</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 296 1')">Wheat</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 296 64')">Wheat</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 297 1')">Bread</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 297 64')">Bread</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 298 1')">Leather Helmet</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 298 64')">Leather Helmet</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 299 1')">Leather Tunic</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 299 64')">Leather Tunic</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 300 1')">Leather Pants</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 300 64')">Leather Pants</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 301 1')">Leather Boots</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 301 64')">Leather Boots</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 302 1')">Chainmail Helmet</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 302 64')">Chainmail Helmet</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 303 1')">Chainmail Chestplate</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 303 64')">Chainmail Chestplate</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 304 1')">Chainmail Leggings</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 304 64')">Chainmail Leggings</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 305 1')">Chainmail Boots</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 305 64')">Chainmail Boots</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 306 1')">Iron Helmet</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 306 64')">Iron Helmet</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 307 1')">Iron Chestplate</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 307 64')">Iron Chestplate</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 308 1')">Iron Leggings</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 308 64')">Iron Leggings</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 309 1')">Iron Boots</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 309 64')">Iron Boots</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 310 1')">Diamond Helmet</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 310 64')">Diamond Helmet</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 311 1')">Diamond Chestplate</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 311 64')">Diamond Chestplate</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 312 1')">Diamond Leggings</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 312 64')">Diamond Leggings</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 313 1')">Diamond Boots</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 313 64')">Diamond Boots</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 314 1')">Golden Helmet</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 314 64')">Golden Helmet</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 315 1')">Golden Chestplate</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 315 64')">Golden Chestplate</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 316 1')">Golden Leggings</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 316 64')">Golden Leggings</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 317 1')">Golden Boots</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 317 64')">Golden Boots</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 318 1')">Flint</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 318 64')">Flint</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 319 1')">Raw Porkchop</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 319 64')">Raw Porkchop</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 320 1')">Cooked Porkchop</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 320 64')">Cooked Porkchop</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 321 1')">Painting</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 321 64')">Painting</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 322 1')">Golden Apple</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 322 64')">Golden Apple</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 323 1')">Sign</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 323 64')">Sign</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 324 1')">Oak Door</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 324 64')">Oak Door</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 325 1')">Bucket</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 325 64')">Bucket</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 326 1')">Water Bucket</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 326 64')">Water Bucket</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 327 1')">Lava Bucket</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 327 64')">Lava Bucket</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 328 1')">Minecart</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 328 64')">Minecart</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 329 1')">Saddle</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 329 64')">Saddle</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 330 1')">Iron Door</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 330 64')">Iron Door</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 331 1')">Redstone</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 331 64')">Redstone</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 332 1')">Snowball</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 332 64')">Snowball</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 333 1')">Oak Boat</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 333 64')">Oak Boat</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 334 1')">Leather</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 334 64')">Leather</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 335 1')">Milk Bucket</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 335 64')">Milk Bucket</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 336 1')">Brick</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 336 64')">Brick</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 337 1')">Clay</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 337 64')">Clay</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 338 1')">Sugar Canes</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 338 64')">Sugar Canes</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 339 1')">Paper</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 339 64')">Paper</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 340 1')">Book</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 340 64')">Book</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 341 1')">Slimeball</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 341 64')">Slimeball</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 342 1')">Minecart with Chest</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 342 64')">Minecart with Chest</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 343 1')">Minecart with Furnace</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 343 64')">Minecart with Furnace</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 344 1')">Egg</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 344 64')">Egg</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 345 1')">Compass</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 345 64')">Compass</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 346 1')">Fishing Rod</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 346 64')">Fishing Rod</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 347 1')">Clock</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 347 64')">Clock</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 348 1')">Glowstone Dust</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 348 64')">Glowstone Dust</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 349 1')">Raw Fish</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 349 64')">Raw Fish</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 350 1')">Cooked Fish</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 350 64')">Cooked Fish</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 351 1')">Ink Sack</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 351 64')">Ink Sack</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 352 1')">Bone</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 352 64')">Bone</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 353 1')">Sugar</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 353 64')">Sugar</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 354 1')">Cake</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 354 64')">Cake</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 355 1')">Bed</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 355 64')">Bed</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 356 1')">Redstone Repeater</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 356 64')">Redstone Repeater</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 357 1')">Cookie</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 357 64')">Cookie</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 358 1')">Map</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 358 64')">Map</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 2257 1')">Cat Disc</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 2257 64')">Cat Disc</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 2258 1')">Blocks Disc</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 2258 64')">Blocks Disc</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 2259 1')">Chirp Disc</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 2259 64')">Chirp Disc</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 2260 1')">Far Disc</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 2260 64')">Far Disc</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 2261 1')">Mall Disc</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 2261 64')">Mall Disc</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 2262 1')">Mellohi Disc</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 2262 64')">Mellohi Disc</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 2263 1')">Stal Disc</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 2263 64')">Stal Disc</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 2264 1')">Strad Disc</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 2264 64')">Strad Disc</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 2265 1')">Ward Disc</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 2265 64')">Ward Disc</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 2266 1')">11 Disc</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 2266 64')">11 Disc</button><br>
+    <button onclick="evaluateMC('give ' + $('#player').val() + ' 2267 1')">Wait Disc</button><button onclick="evaluateMC('give ' + $('#player').val() + ' 2267 64')">Wait Disc</button><br>
+</body>
