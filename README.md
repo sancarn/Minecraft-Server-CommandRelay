@@ -33,7 +33,7 @@ request.send("say Hello World")
 
 This command can be wrapped in a function which can be called from the HTML web page hosted by the ruby server:
 
-![webpage](FirstWebPage.png)
+![webpage](https://github.com/sancarn/Minecraft-Server-CommandRelay/blob/master/FirstWebpage.png?raw=true)
 
 Above you can see our first hodge-podge iteration of a web server client. You can search for items with `Ctrl+F` and it works for any user (entered in the name box). There is also a console, found in the top right, where users can execute custom minecraft command scripts.
 
