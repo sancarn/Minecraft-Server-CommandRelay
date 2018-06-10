@@ -18,8 +18,7 @@ It works as follows:
 You open 2 ports:
 `40010` and `40011` (these ports are configurable).
 
-You run the following command:
-`ruby 'server.rb' | java -jar minecraft-server.jar `
+You run the shell script
 
 This will run the Ruby and Minecraft servers. The Minecraft server will run on port `40010` and the Ruby server will run on port `40011`.
 
