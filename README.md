@@ -14,11 +14,10 @@ This is the exact reason that we initially made this system.
 
 It works as follows:
 
-
 You open 2 ports:
 `40010` and `40011` (these ports are configurable).
 
-You run the shell script
+You run the shell script (or use `ruby server.rb | java -jar minecraft_server-1.7.3.jar`)
 
 This will run the Ruby and Minecraft servers. The Minecraft server will run on port `40010` and the Ruby server will run on port `40011`.
 
@@ -36,4 +35,4 @@ This command can be wrapped in a function which can be called from the HTML web 
 
 Above you can see our first hodge-podge iteration of a web server client. You can search for items with `Ctrl+F` and it works for any user (entered in the name box). There is also a console, found in the top right, where users can execute custom minecraft command scripts.
 
-Of course the end goal of this webpage would be to have a full creative-style menu where users can give items with left click, and get stacks with shift-click, and search for specific items etc. but this currently has not been implemented. 
+Of course the end goal of this webpage would be to have a full creative-style menu where users can give items with left click, and get stacks with shift-click, and search for specific items etc. but this currently has not been implemented.
